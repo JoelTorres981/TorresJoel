@@ -17,13 +17,12 @@ public class formLogin extends JFrame {
         setSize(300, 200);
         setVisible(true);
 
-
         accesoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String usuario = usuarioText.getText();
                 String password = passwordField1.getText();
-                if (usuario.equals("admin") && password.equals("1234")) {
+                if (usuario.equals("torres") && password.equals("esfot123")) {
                     new formMenu();
                     dispose();
                 } else if (usuario.isEmpty() || password.isEmpty() ) {
