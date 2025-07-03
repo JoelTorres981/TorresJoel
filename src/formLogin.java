@@ -27,6 +27,8 @@ public class formLogin extends JFrame {
                     dispose();
                 } else if (usuario.isEmpty() || password.isEmpty() ) {
                     JOptionPane.showMessageDialog(null,"Ingrese los datos");
+                } else {
+                    JOptionPane.showMessageDialog(null,"Credenciales incorrectas");
                 }
             }
         });

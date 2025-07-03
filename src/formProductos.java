@@ -13,11 +13,11 @@ public class formProductos extends JFrame {
     private JTextField StockText;
     private JButton REGRESARALMENUButton;
 
-    private String codigoG = codigoText.getText();
-    private String nombreG = nombreText.getText();
-    private String detalleG = detalleText.getText();
-    private String precioUnitarioG = PrecioUnitarioText.getText();
-    private String stockG = StockText.getText();
+    public static String codigoG;
+    public static String nombreG;
+    public static String detalleG;
+    public static String precioUnitarioG;
+    public static String stockG;
 
     public formProductos() {
         setTitle("PRODUCTOS (ADMIN)");
