@@ -1,27 +1,30 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class formMostrarProductos extends JFrame {
-    private JPanel mostrarProductosPanel;
+    private JPanel mostrarPanel;
+    private JLabel codigoValorLabel;
+    private JLabel nombreValorLabel;
+    private JLabel detalleValorLabel;
+    private JLabel precioValorLabel;
+    private JLabel stockValorLabel;
     private JButton REGRESARALMENUButton;
-    private JLabel codigoLabel;
-    private JLabel nombreLabel;
-    private JLabel detalleLabel;
-    private JLabel stockLabel;
 
     public formMostrarProductos() {
-        setTitle("Menu");
+        setTitle("VER PRODUCTOS");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setContentPane(mostrarProductosPanel);
+        setContentPane(mostrarPanel);
         setLocationRelativeTo(null);
+        setSize(350, 250); // Tamaño adecuado
         setVisible(true);
-        setSize(200, 200);
 
-        codigoLabel.setText(formProductos.codigoG);
-        nombreLabel.setText(formProductos.nombreG);
-        detalleLabel.setText(formProductos.detalleG);
-        stockLabel.setText(formProductos.stockG);
+        codigoValorLabel.setText(formProductos.codigoG);
+        nombreValorLabel.setText(formProductos.nombreG);
+        detalleValorLabel.setText(formProductos.detalleG);
+        precioValorLabel.setText(formProductos.precioUnitarioG);
+        stockValorLabel.setText(formProductos.stockG);
 
         REGRESARALMENUButton.addActionListener(new ActionListener() {
             @Override
@@ -30,9 +33,5 @@ public class formMostrarProductos extends JFrame {
                 dispose();
             }
         });
-    }
-
-    public static void main(String[] args) {
-        new formMostrarProductos();
     }
 }
